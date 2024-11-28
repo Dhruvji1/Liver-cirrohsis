@@ -41,3 +41,7 @@ function filterRecords() {
       }
   }
 }
+function toggleMenu() {
+  const navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('active'); // Toggle the 'active' class on the navbar
+}
