@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAELDS - Analyse</title>
+    <link rel="stylesheet" href="analyse.css">
+</head>
+<body>
+    <header>
+        <h1>Analyse Patient Liver Image</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="analyse.html" class="active">Analyse</a></li>
+                <li><a href="records.html">Records</a></li>
+                <li><a href="index.html#medicines">Medicines</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="analyse-section">
+            <h2>Upload and Analyse</h2>
+            <form id="analyseForm">
+                <label for="imageInput">Upload Liver Image:</label>
+                <input type="file" id="imageInput" accept="image/*" required>
+                <button type="submit">Analyse</button>
+            </form>
+            <div id="analysisResult"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CAELDS. All rights reserved.</p>
+    </footer>
+
+    <script src="analyse.js"></script>
+</body>
+</html>

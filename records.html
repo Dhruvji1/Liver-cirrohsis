@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAELDS - Patient Records</title>
+    <link rel="stylesheet" href="records.css">
+</head>
+<body>
+    <header>
+        <h1>Patient Records</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="analyse.html">Analyse</a></li>
+                <li><a href="records.html" class="active">Records</a></li>
+                <li><a href="index.html#medicines">Medicines</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="records-section">
+            <h2>Search Patient Records</h2>
+            <input type="text" id="searchInput" placeholder="Search patient by name" oninput="filterRecords()">
+            
+            <div id="patientContainer">
+                <ul id="patientList"></ul>
+            </div>
+            
+            <div class="pagination">
+                <button id="prevPage" onclick="changePage(-1)">Previous</button>
+                <span id="pageInfo"></span>
+                <button id="nextPage" onclick="changePage(1)">Next</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CAELDS [Flowbreakers]. All rights reserved.</p>
+    </footer>
+
+    <script src="records.js"></script>
+</body>
+</html>

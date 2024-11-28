@@ -1,0 +1,183 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  color: white;
+  text-align: center;
+
+  position: relative;
+}
+
+header h1 {
+  background-color: #4CAF50;
+  margin: 0;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #26d42f;
+  border-radius: 5px;
+ 
+}
+
+/* Analyse Section */
+.analyse-section {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+.analyse-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.analyse-section input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.analyse-section button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.analyse-section button:hover {
+  background-color: #45a049;
+}
+
+/* Analysis Result */
+#analysisResult {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+/* Responsive Styles for Analyse Section */
+.analyse-section {
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+input[type="file"], button {
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Navbar Responsiveness */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.navbar a:hover, .navbar a.active {
+  background-color: #4CAF50;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .navbar a {
+      font-size: 0.9rem;
+  }
+
+  .analyse-section {
+      padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar a {
+      font-size: 0.8rem;
+      padding: 8px 10px;
+  }
+
+  input[type="file"], button {
+      font-size: 0.9rem;
+  }
+}

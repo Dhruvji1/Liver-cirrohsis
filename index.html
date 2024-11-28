@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAELDS - Liver Diagnosis</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <h1>Computer-Assisted Early Liver Diagnosis System</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="analyse.html">Analyse</a></li>
+                <li><a href="records.html">Records</a></li>
+                <li><a href="index.html#medicines">Medicines</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="home-section">
+            <h2>Welcome to CAELDS</h2>
+            <p>Your AI-powered assistant for early liver disease diagnosis.</p>
+        </section>
+
+        <section id="analyse" class="analyse-section">
+            <h2>Analyse Liver Imaging Data</h2>
+            <input type="file" id="imageUpload" accept="image/*">
+            <button id="uploadButton" onclick="processImage()">Upload & Analyze</button>
+            <div id="resultContainer">
+                <p>No analysis performed yet. Upload a file to start.</p>
+            </div>
+        </section>
+
+        <section id="records" class="records-section">
+            <h2>Patient Records</h2>
+            <input type="text" id="searchInput" placeholder="Search patient by name" oninput="filterRecords()">
+            <ul id="patientList">
+                <li data-name="John Doe">John Doe - Liver Condition: Healthy</li>
+                <li data-name="Jane Smith">Jane Smith - Liver Condition: Fatty Liver</li>
+                <li data-name="Robert Johnson">Robert Johnson - Liver Condition: Cirrhosis</li>
+                <li data-name="Emily Davis">Emily Davis - Liver Condition: Mild Inflammation</li>
+                <li data-name="Michael Brown">Michael Brown - Liver Condition: Tumor Detected</li>
+                <li data-name="Alice Green">Alice Green - Liver Condition: Liver Failure</li>
+                <li data-name="David Wilson">David Wilson - Liver Condition: Hepatitis</li>
+                <li data-name="Sarah Lee">Sarah Lee - Liver Condition: Normal</li>
+                <li data-name="Peter Parker">Peter Parker - Liver Condition: Scarred Tissue</li>
+                <li data-name="Nina Patel">Nina Patel - Liver Condition: Early Fibrosis</li>
+            </ul>
+        </section>
+
+        <section id="medicines" class="medicines-section">
+            <h2>Medicine Recommendations</h2>
+            <p>View personalized medicine suggestions and treatment plans based on diagnosis results.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CAELDS [Flowbreakers]. All rights reserved.</p>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>
