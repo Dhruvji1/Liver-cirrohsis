@@ -4,7 +4,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAELDS - Liver Diagnosis</title>
-    <link rel="stylesheet" href="index.css">
+   <style>
+       /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  color: white;
+  text-align: center;
+
+  position: relative;
+}
+
+header h1 {
+  background-color: #4CAF50;
+  margin: 0;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #26d42f;
+  border-radius: 5px;
+ 
+}
+
+/* Section Styles */
+main {
+  margin: 20px auto;
+  max-width: 800px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+  margin-top: 0;
+  text-align: center;
+}
+
+.home-section, .analyse-section, .records-section, .medicines-section {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Analyse Section */
+.analyse-section input[type="file"] {
+  display: block;
+  margin: 10px auto;
+}
+
+.analyse-section button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+ 
+}
+
+.analyse-section button:hover {
+  background-color: #45a049;
+}
+
+.analyse-section #resultContainer {
+  text-align: center;
+  padding: 10px;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+
+/* Records Section */
+.records-section p {
+  text-align: justify;
+}
+
+/* Medicines Section */
+.medicines-section p {
+  text-align: justify;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+/* Search Bar */
+.records-section input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Patient List */
+#patientList {
+  list-style-type: none;
+  padding: 0;
+  max-height: 150px; /* Scrolling area height */
+  overflow-y: auto; /* Enables scrolling */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fafafa;
+}
+
+#patientList li {
+  background-color: #f9f9f9;
+  margin: 5px 0;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+#patientList li:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+/* Scrollbar Styling */
+#patientList::-webkit-scrollbar {
+  width: 10px;
+}
+
+#patientList::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+#patientList::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+/* General Styles for Navbar */
+.navbar {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center;
+  background-color: #333;
+  padding: 10px 0;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 5px 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.navbar a:hover, .navbar a.active {
+  background-color: #4CAF50;
+}
+
+/* Responsive Typography */
+h1, h2, h3, p {
+  margin: 10px auto;
+  padding: 0 10px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  h2 {
+      font-size: 1.3rem;
+  }
+
+  p {
+      font-size: 1rem;
+  }
+}
+
+/* Container Layout for Sections */
+.container {
+  max-width: 90%; /* Reduce container width for small screens */
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Form Inputs */
+input, button {
+  font-size: 1rem;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+}
+
+@media (max-width: 480px) {
+  input, button {
+      font-size: 0.9rem;
+  }
+}
+
+   </style>
 </head>
 <body>
     <header>
